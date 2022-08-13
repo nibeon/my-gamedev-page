@@ -1,0 +1,104 @@
+/* main colors */
+@first: #AFD98D; // желто-зеленый
+@second: #C080B8; // красно-фиолетовый
+
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+* {
+    font-family: 'VT323', monospace;
+    p {
+        font-size: 13pt;
+    }
+}
+
+header {
+    background-color: @first;
+    text-align: center;
+    
+    ul {
+        list-style-type: none;
+        padding: 0;
+        
+        a {
+            font-family: 'Roboto', regular;
+            padding: 0 10px;
+        }
+    }
+}
+#about {
+    background-color: lighten(@first, 10%);
+}
+
+a{
+    color: @second;
+    font-weight: bold;
+}
+
+h1 {
+    text-align: center;
+    padding: 25px 0;
+}
+
+/* games block */
+#games {
+    background-color: white;
+    .row {
+        border: 1px solid #acacac;
+        margin: 10px 0;
+        h2 {
+            text-align: center;
+        }
+    }
+    .column {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 10px;
+        img {
+            width: 315px;
+            height: 250px;
+        }
+    }
+    span.b {
+        font-weigth: bold;
+        color: darken(@second, 10%);
+    }
+
+}
+
+
+/* contacts */
+#contacts {
+    //background-color: @first;
+    
+    .column {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        div {
+            text-align: center;
+        }
+    }
+    
+    padding: 100px 0;
+    
+    a {
+        text-decoration: none;
+        i, img {
+            width: 25px;
+            height: 25px;
+            font-size: 20pt;
+        }
+        &:hover img {
+            
+        }
+    }
+    
+}
+footer {
+    background-color: darken(@first, 10%);
+    padding: 15px 0;
+    color: white;
+    a {
+        color: white;
+    }
+}
